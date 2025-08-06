@@ -64,7 +64,7 @@ const Hero = () => {
               flex w-36 justify-between transform transition-transform duration-300 ease-out"
           >
             <a
-              href="/Resume/Jayssen+De+Castro+CV+2025.pdf"
+              href="/Resume/Jayssen-De-Castro-CV-2025.pdf"
               download
               className="flex items-center gap-2"
             >
