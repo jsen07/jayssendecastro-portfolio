@@ -10,8 +10,8 @@ const SocialsBar = () => {
         bg-neutral-800 rounded-3xl flex flex-row items-center justify-evenly
         shadow-md z-10
 
-        lg:h-80 lg:fixed lg:px-3 lg:py-0 lg:top-1/2 lg:right-4 lg:left-auto lg:flex-col lg:transform lg:-translate-y-1/2
-        lg:w-fit
+        lg:h-80 lg:fixed lg:px-3 lg:py-0 lg:top-1/2  lg:right-4 lg:left-auto lg:flex-col lg:-translate-y-1/2
+        lg:w-fit animate-fadeInRight
       `}
     >
       {socialLinks.map((social, index) => (
