@@ -74,7 +74,7 @@ export const ProjectData = [
       "The Dome is a project based on a Discord server me and my friends are a part of. The Dome is a social media platform designed to bring people together in meaningful, authentic, and engaging ways. Whether you're sharing life moments, building communities, or exploring diverse perspectives, The Dome is your digital home for connection.",
     img: "thedome.png",
     code: "https://github.com/jsen07/thedome",
-    live: "https://thedome-qdgb4rzov-jays-projects-53f1b476.vercel.app/",
+    live: "https://thedome.vercel.app/",
   },
   {
     number: "3",
