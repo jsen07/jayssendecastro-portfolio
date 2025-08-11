@@ -37,6 +37,7 @@ const Contact = () => {
         love to hear from you!
       </p>
 
+      {/* Contact Form */}
       <div className="bg-neutral-900 py-6">
         <form ref={form} onSubmit={sendMail} className="space-y-4">
           <div>

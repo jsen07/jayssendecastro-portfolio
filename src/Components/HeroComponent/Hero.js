@@ -1,28 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import SocialsBar from "./BarComponent/SocialsBar";
 import DownloadIcon from "@mui/icons-material/Download";
+import { InView } from "../hooks/Observer";
 
 const Hero = () => {
-  const ref = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const currentRef = ref.current;
-    if (!currentRef) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
-
-    observer.observe(currentRef);
-
-    return () => {
-      if (currentRef) observer.unobserve(currentRef);
-    };
-  }, []);
+  const [ref, isVisible] = InView();
 
   return (
     <div
@@ -31,6 +13,7 @@ const Hero = () => {
         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}
       `}
     >
+      {/* Main Hero Content */}
       <div className="relative z-10 text-white px-2">
         <div className="text-7xl md:text-8xl font-bebas font-bold text-white tracking-wider">
           <h1 className="text-teal-400">FULLSTACK</h1>

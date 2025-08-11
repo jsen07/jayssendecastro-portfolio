@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
+import { InView } from "../hooks/Observer";
 
 const timeline = [
   {
@@ -24,26 +25,7 @@ const timeline = [
 ];
 
 const AboutMe = () => {
-  const ref = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const currentRef = ref.current;
-    if (!currentRef) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
-
-    observer.observe(currentRef);
-
-    return () => {
-      if (currentRef) observer.unobserve(currentRef);
-    };
-  }, []);
+  const [ref, isVisible] = InView();
 
   return (
     <div
@@ -73,7 +55,8 @@ const AboutMe = () => {
           <img
             src={require(`../assets/images/IMG_3998.png`)}
             className="object-cover h-64 w-64 rounded-full border-neutral-800 sm:rounded-lg sm:w-[300px] sm:h-[400px] md:w-[350px] md:h-[350px]"
-            alt="profile"
+            alt="Portrait"
+            loading="lazy"
           />
 
           <div className="bg-neutral-800 text-white font-poppins flex flex-col w-full mt-4 sm:mt-0 sm:w-[220px] md:w-[300px] 2xl:w-[450px]">
