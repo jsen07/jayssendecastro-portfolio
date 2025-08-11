@@ -93,8 +93,16 @@ const Navigation = () => {
                     }
                   `}
                 >
-                  {social.icon}
-                  {social.title}
+                  <a
+                    href={social.link}
+                    key={index}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 hover:text-teal-400 transition-colors"
+                  >
+                    {social.icon}
+                    {social.title}
+                  </a>
                 </li>
               ))}
             </ul>
